@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HIRA Risk Assessment Calculator</title>
+    <link rel="stylesheet" href="/style/calculator.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>HIRA Risk Assessment Calculator</h1>
+            <p>Use this tool to calculate the risk score based on severity, likelihood, and exposure.</p>
+        </header>
+
+        <!-- Input Section -->
+        <section id="risk-inputs">
+            <h2>Risk Factors</h2>
+
+            <!-- Severity Input -->
+            <label for="severity">Severity:</label>
+            <select id="severity" name="severity">
+                <option value="1">1 - Minor</option>
+                <option value="2">2 - Low</option>
+                <option value="3">3 - Moderate</option>
+                <option value="4">4 - High</option>
+                <option value="5">5 - Critical</option>
+            </select>
+
+            <!-- Likelihood Input -->
+            <label for="likelihood">Likelihood:</label>
+            <select id="likelihood" name="likelihood">
+                <option value="1">1 - Rare</option>
+                <option value="2">2 - Unlikely</option>
+                <option value="3">3 - Possible</option>
+                <option value="4">4 - Likely</option>
+                <option value="5">5 - Almost Certain</option>
+            </select>
+
+            <!-- Exposure Input -->
+            <label for="exposure">Exposure:</label>
+            <select id="exposure" name="exposure">
+                <option value="1">1 - Rare</option>
+                <option value="2">2 - Occasional</option>
+                <option value="3">3 - Frequent</option>
+                <option value="4">4 - Continuous</option>
+                <option value="5">5 - Constant</option>
+            </select>
+        </section>
+
+        <!-- Calculate Button -->
+        <section id="controls">
+            <button id="calculate-btn">Calculate Risk</button>
+            <button id="clear-btn">Clear</button>
+        </section>
+
+        <!-- Result Display Section -->
+        <section id="results">
+            <h2>Risk Score</h2>
+            <p>Risk Score: <span id="risk-score">--</span></p>
+            <p>Risk Level: <span id="risk-level">--</span></p>
+        </section>
+
+        <!-- Recommendations Section -->
+        <section id="recommendations">
+            <h2>Recommendations</h2>
+            <p id="risk-recommendation">Select values above and calculate to see recommendations based on the risk level.</p>
+        </section>
+    </div>
+
+    <script src="/static/calculator.js"></script>
+</body>
+</html>
